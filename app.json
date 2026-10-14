@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Sesim Ol",
+    "slug": "sesim-ol",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Kişisel iletişim butonları için ses kaydetmek üzere mikrofon kullanılır.",
+        "NSCameraUsageDescription": "İletişim butonlarına fotoğraf eklemek için kamera kullanılır.",
+        "NSPhotoLibraryUsageDescription": "İletişim butonlarına fotoğraf eklemek için fotoğraf arşivinize erişilir."
+      }
+    },
+    "android": {
+      "package": "app.sesimol.aac",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "İletişim butonlarınıza fotoğraf eklemek için fotoğraf arşivinize erişilir.",
+          "cameraPermission": "İletişim butonlarınıza fotoğraf çekmek için kamera kullanılır.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Kişisel iletişim butonları için ses kaydetmek üzere mikrofon kullanılır.",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "81362ae7-86b7-4a11-8706-9d064b97b6a6"
+      }
+    }
+  }
+}
